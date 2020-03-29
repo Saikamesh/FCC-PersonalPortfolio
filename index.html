@@ -1,14 +1,213 @@
 <html>
     <head><title>Sai Kamesh</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
-        body{
-            font-family: 'PT Sans', sans-serif;
+        *{
+          box-sizing: border-box;
         }
+        body{
+            background-color: #f5f6fa;
+            color:#1B1464;
+            font-family: 'PT Sans', sans-serif;
+            margin:0;
+        }
+        nav{
+            background-color: #dcdde1;
+            color:#192a56;
+            display: flex;
+            justify-content: flex-end;
+            padding:10px;
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            z-index:100;
+        }
+    nav a{
+    color:#192a56;
+    position: relative;
+    margin-left: 25px;
+    text-decoration: solid;
+    }
+    nav a::after{
+        content:'';
+        border-bottom: 3px solid #192a56 ;
+        position: absolute;
+        top:0;
+        left:0;
+        transform: translateY(10px);
+        transition: transform 0.3s ease;
+        opacity:0;
+        height:100%;
+        width:100%;
+    }
+    nav a:hover::after{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    header{
+    background-image: url(https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80);
+    background-size: cover;
+    background-position: center center;
+    height:100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+    /*change Opacity only when needed*/
+    header::after{
+    content: "";
+    background-color:#000 ;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity:0;
+    }
+    header *{
+    position: relative;
+    z-index: 1;
+    }
+    header h1{
+    margin-bottom: 5px;
+    font-size: 50px;
+    margin-top: 0;
+    }
+    header p{
+    margin:0;
+    font-size: 30px;
+    }
+    section{
+    text-align: center;
+    padding:40px;
+    }
+    section h2{
+        margin-bottom: 0;
+    }
+    section p{
+        margin-top:0;
+    }
+    .project-container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 810px;
+        margin:20px auto 0;
+    }
+    .project-tile{
+        margin:10px;
+        max-width: 250px;
+        text-decoration: solid;
+        transition: transform 0.3s ease;
+    }
+    .project-tile:hover{
+        transform: scale(1.1);
+    }
+    .project-tile img{
+        max-width: 100%;
+    }
+    .project-tile p{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .social-bg{
+    background-color: #c7ecee;
+    margin-bottom: 0;
+    }
+    .social-ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        margin:0;
+    }
+    .social-ul a{
+        font-size: 32px;
+        margin:5px 10px;
+    }
+    footer{
+            padding:10px;
+          background-color: #dcdde1;
+          color:#192a56;
+      }
+      footer .fa-heart{
+        color:red;
+      }
+      @media(max-width:400px){
+          section{
+             padding:10px;
+          }
+      }
     </style>
     </head>
     <body>
-        
-    </body>
+        <nav>
+            <a href="#welcome-section">About</a>
+            <a href="#projects">Project</a>
+            <a href="#social">Social</a>
+        </nav>
+        <header id="welcome-section">
+            <h1>Hello! 👋</h1>
+            <p>My Name is &lt;UserName&gt;</p>
+            <p>I am a &lt;Profession&gt;</p>
+        </header>
+        <section id=projects>
+            <h2>Projects</h2>
+          <div class="project-container">
+<a href="https://github.com/" target="_blank" class="project-tile">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftr1.cbsistatic.com%2Fhub%2Fi%2Fr%2F2018%2F03%2F20%2Fcad44d4d-6707-4703-9eeb-30d539d16a6e%2Fresize%2F770x%2Fa190d50b571718c7337f2a9277b38d78%2Fistock-844535646.jpg&f=1&nofb=1"
+     alt="Sample Project 1">
+     <p>Sample Project 1</p>
+</a>
+<a href="https://github.com/" target="_blank" class="project-tile">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftr1.cbsistatic.com%2Fhub%2Fi%2Fr%2F2018%2F03%2F20%2Fcad44d4d-6707-4703-9eeb-30d539d16a6e%2Fresize%2F770x%2Fa190d50b571718c7337f2a9277b38d78%2Fistock-844535646.jpg&f=1&nofb=1"
+     alt="Sample Project 2">
+     <p>Sample Project 2</p>
+</a>
+<a href="https://github.com/" target="_blank" class="project-tile">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftr1.cbsistatic.com%2Fhub%2Fi%2Fr%2F2018%2F03%2F20%2Fcad44d4d-6707-4703-9eeb-30d539d16a6e%2Fresize%2F770x%2Fa190d50b571718c7337f2a9277b38d78%2Fistock-844535646.jpg&f=1&nofb=1"
+     alt="Sample Project 3">
+     <p>Sample Project 3</p>
+</a>
+<a href="https://github.com/" target="_blank" class="project-tile">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftr1.cbsistatic.com%2Fhub%2Fi%2Fr%2F2018%2F03%2F20%2Fcad44d4d-6707-4703-9eeb-30d539d16a6e%2Fresize%2F770x%2Fa190d50b571718c7337f2a9277b38d78%2Fistock-844535646.jpg&f=1&nofb=1"
+     alt="Sample Project 4">
+     <p>Sample Project 4</p>
+</a>
+<a href="https://github.com/" target="_blank" class="project-tile">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftr1.cbsistatic.com%2Fhub%2Fi%2Fr%2F2018%2F03%2F20%2Fcad44d4d-6707-4703-9eeb-30d539d16a6e%2Fresize%2F770x%2Fa190d50b571718c7337f2a9277b38d78%2Fistock-844535646.jpg&f=1&nofb=1"
+     alt="Sample Project 5">
+     <p>Sample Project 5</p>
+</a>
+<a href="https://github.com/" target="_blank" class="project-tile">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftr1.cbsistatic.com%2Fhub%2Fi%2Fr%2F2018%2F03%2F20%2Fcad44d4d-6707-4703-9eeb-30d539d16a6e%2Fresize%2F770x%2Fa190d50b571718c7337f2a9277b38d78%2Fistock-844535646.jpg&f=1&nofb=1"
+     alt="Sample Project 6">
+     <p>Sample Project 6</p>
+</a>
+</div>
+        </section>
 
+        <section id=social class="social-bg">
+            <h2>Social Media</h2>
+            <p>You can find me on</p>
+<ul class="social-ul">
+    <li><a id="profile-link" href="http://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+    <li><a id="profile-link" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+    <li><a id="profile-link" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+    <li><a id="profile-link" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    <li><a id="profile-link" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+    <li><a id="profile-link" href="https://www.github.com/" target="_blank"><i class="fab fa-github"></i></a></li>
+</ul>
+        </section>
+    </body>
+<footer>
+<p>This is a Sample Portfolio.</p>
+  Spread<i class="fas fa-heart"></i></footer>
 </html>
